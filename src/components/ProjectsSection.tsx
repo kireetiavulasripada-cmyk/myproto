@@ -2,10 +2,38 @@ import { motion } from "framer-motion";
 import { Folder, ArrowUpRight, Github, ExternalLink, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import logisticsCover from "@/assets/projects/logistics-cover.jpg";
-import ikeaOverview from "@/assets/dashboards/ikea-overview.png";
+
+import agricultureCover from "@/assets/projects/agriculture-cover-themed.jpg";
+import retailCover from "@/assets/projects/retail-cover-themed.jpg";
+import logisticsCover from "@/assets/projects/logistics-cover-themed.jpg";
+import ragCover from "@/assets/projects/rag-cover-themed.jpg";
+
+
 
 const projects = [
+  {
+    title: "India Agriculture Crop Production Analysis",
+    date: "Jun 2023",
+    desc: "Analyzed India's agricultural crop production (1997–2021) using Tableau dashboards with interactive filters, state-wise comparisons, and crop trend visualizations.",
+    tags: ["Tableau", "Data Visualization", "Analytics"],
+    accent: "from-blue-500 to-cyan-500",
+    github: "https://github.com/kireeti30/India-Agriculture-crop-production-analysis.git",
+    slug: "agriculture",
+    image: agricultureCover,
+    hasPage: true,
+  },
+
+  {
+    title: "Retail Customer Retention Analytics",
+    date: "Jan 2026",
+    desc: "Developed Power BI dashboard analyzing churn, loyalty, and customer behavior using Power Query and DAX.",
+    tags: ["Power BI", "DAX", "Analytics"],
+    accent: "from-secondary to-secondary/60",
+    github: "https://github.com/kireeti30/IKEA-Customer-Retention-PowerBI.git",
+    slug: "retail-customer-retention",
+    image: retailCover,
+    hasPage: true,
+  },
 
   {
     title: "Logistics Optimization for Delivery Routes",
@@ -16,35 +44,7 @@ const projects = [
     github: "https://github.com/kireeti30/logistics-operations-sql-analysis.git",
     slug: "logistics-optimization",
     image: logisticsCover,
-  },
-  {
-  title: "India Agriculture Crop Production Analysis",
-  date: "Feb 2026",
-  desc: "Analyzed India's agricultural crop production (1997–2021) using Tableau dashboards with interactive filters, state-wise comparisons, and crop trend visualizations.",
-  tags: ["Tableau", "Data Visualization", "Analytics"],
-  accent: "from-blue-500 to-cyan-500",
-  github: "https://github.com/kireeti30",
-  slug: "agriculture-project",
-  image: "/images/agriculture-tableau.png",
-},
-  {
-    title: "Retail Customer Retention Analytics",
-    date: "Jan 2026",
-    desc: "Developed Power BI dashboard analyzing churn, loyalty, and customer behavior using Power Query and DAX.",
-    tags: ["Power BI", "DAX", "Analytics"],
-    accent: "from-secondary to-secondary/60",
-    github: "https://github.com/kireeti30/IKEA-Customer-Retention-PowerBI.git",
-    slug: "retail-customer-retention",
-    image: ikeaOverview,
-  },
-  {
-    title: "Social Media Analytics for Strategic Branding",
-    date: "Dec 2025",
-    desc: "Built Excel analytics solution linking ad spend with follower growth and campaign success.",
-    tags: ["Excel", "Data Analysis", "Marketing"],
-    accent: "from-accent to-secondary",
-    github: "https://github.com/kireeti30/MyntraProject-Excel.git",
-    slug: "social-media-analytics",
+    hasPage: true,
   },
   {
     title: "RAG-based GenAI Knowledge Assistant",
@@ -54,6 +54,7 @@ const projects = [
     accent: "from-accent/80 to-accent",
     github: "https://github.com/kireeti30",
     slug: "rag-genai-assistant",
+    image: ragCover,
     badge: "Research Paper",
   },
 ];
